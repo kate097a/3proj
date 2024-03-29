@@ -220,3 +220,7 @@ button {
 #text1 {
   font-family: vanilla;
 }
+
+.rotate {
+  display: none;
+}
