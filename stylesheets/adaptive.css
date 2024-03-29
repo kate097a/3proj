@@ -1,30 +1,49 @@
-/* Desktop */
-@media screen and (min-width: 1224px) {
-  /* Сюда писать код для больших экранов */
+@media all and (orientation: portrait){
+  body{
+    width: 100%;
+    overflow: hidden;
+  }
+  .rotatee{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+  }
+  .linesContainer{
+      display: none;
+  }
+
+  .buttons {
+    display: none;
+  }
+
+  .rotate {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .rotateImg {
+    width: 35vw;
+    height: 35vw;
+    position: absolute;              
+    top: 43%; 
+    left: 32%;               
+    transform: translate(0, -50%);
+    animation: rot 3s linear infinite;
+  }
+
+  @keyframes rot {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(-360deg);}
+  }
+
+
 }
 
-/* iPad Landscape and smaller desktop screens */
-@media screen and (max-width: 1024px) and (min-width: 769px) {
-  /* Сюда писать код для iPad Landscape и экранов меньше 1024px ширины */
-}
+@media all and (orientation: landscape){
 
-/* iPad Portrait */
-@media screen and (max-width: 768px) {
-  /* Сюда писать код для iPad Portrait и экранов меньше 768px ширины */
-}
+  .rotate {
+    display: none;
+  }
 
-/* iPhone Landscape and smaller tablets */
-@media screen and (max-width: 768px) and (min-width: 481px) {
-  /* Сюда писать код для iPhone Landscape и планшетов с экранами меньше 768px ширины */
 }
-
-/* iPhone Portrait */
-@media screen and (max-width: 480px) {
-  /* Сюда писать код для iPhone Portrait и экранов меньше 480px ширины */
-}
-
-/* Common code for all mobile devices (320px and above) */
-@media screen and (max-width: 768px) {
-  /* Сюда писать общий код для всех мобильных устройств (320px и выше) */
-}
-
